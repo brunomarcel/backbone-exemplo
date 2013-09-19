@@ -7,7 +7,7 @@ App.Views.Contatos = Backbone.View.extend({
 	render: function(){
 		el = this.$el;
 		
-		el.load('contatos.html', function(response, status, xhr){
+		el.load('contatos.html', function(){
 			$elm.ctnt.html(el);
 			var template = $('#scriptContatos').html();
 			el.html(_.template(template,{items:allContacts.toJSON()}));	//envia a collection para a view
